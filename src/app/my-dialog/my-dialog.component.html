@@ -1,0 +1,18 @@
+<div>
+  <h2 md-dialog-title>My Dialog</h2>
+  <hr>
+  <md-dialog-content>
+    Some Content Here
+    <br>
+    <br>
+    <strong>{{data}}</strong>
+  </md-dialog-content>
+  <md-input-container>
+    <input mdInput type="text" [(ngModel)]="info">
+  </md-input-container>
+  <md-dialog-actions>
+    <button md-raised-button (click)="onCloseConfirm()">CONFIRM</button>
+    <button md-raised-button (click)="onCloseCancel()">CANCEL</button>
+  </md-dialog-actions>
+
+</div>
