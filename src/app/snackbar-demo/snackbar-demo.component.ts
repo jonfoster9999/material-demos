@@ -1,8 +1,8 @@
-import { TooltipDemoComponent } from './../tooltip-demo/tooltip-demo.component';
-import { MyFormComponent } from './../my-form/my-form.component';
-import { Component, OnInit} from '@angular/core';
-import { MdSnackBar } from '@angular/material';
-import { Subject } from 'rxjs/Subject';
+import {TooltipDemoComponent} from './../tooltip-demo/tooltip-demo.component';
+import {MyFormComponent} from './../my-form/my-form.component';
+import {Component, OnInit} from '@angular/core';
+import {MatSnackBar} from '@angular/material';
+import {Subject} from 'rxjs/Subject';
 
 
 @Component({
@@ -12,11 +12,11 @@ import { Subject } from 'rxjs/Subject';
 })
 export class SnackbarDemoComponent implements OnInit {
 
-  constructor(private snackBar: MdSnackBar) { }
-  
-  ngOnInit() {
+  constructor(private snackBar: MatSnackBar) {
   }
 
+  ngOnInit() {
+  }
 
 
   openSnackBar() {

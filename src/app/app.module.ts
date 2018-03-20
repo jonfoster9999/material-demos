@@ -5,18 +5,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdDialogModule, 
-          MdCardModule,
-          MdButton,
-          MdTooltipModule,
-          MdSnackBarModule,
-          MdMenuModule,
-          MdIconModule,
-          MdSidenavModule,
-          MdToolbarModule
+import { MatDialogModule,
+          MatCardModule,
+          MatSliderModule,
+          MatButton,
+          MatTooltipModule,
+          MatSnackBarModule,
+          MatMenuModule,
+          MatIconModule,
+          MatSidenavModule,
+          MatToolbarModule,
+          MatChipsModule,
+          MatInputModule,
+          MatButtonModule
         } from '@angular/material';
 import { AppComponent } from './app.component';
-import { MdInputModule, MdButtonModule } from '@angular/material';
 import 'hammerjs';
 import { MyFormComponent } from './my-form/my-form.component';
 import { DialogDemoComponent } from './dialog-demo/dialog-demo.component';
@@ -25,6 +28,10 @@ import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 import { SnackbarDemoComponent } from './snackbar-demo/snackbar-demo.component';
 import { MenuDemoComponent } from './menu-demo/menu-demo.component';
 import { ToolbarDemoComponent } from './toolbar-demo/toolbar-demo.component';
+import { HoverDirective } from './hovers.directive';
+import { GridComponent } from './grid/grid.component';
+import { HttpClientModule } from '@angular/common/http';
+import {AuthServiceService} from './auth-service.service';
 
 @NgModule({
   declarations: [
@@ -37,34 +44,40 @@ import { ToolbarDemoComponent } from './toolbar-demo/toolbar-demo.component';
     NavigationComponent,
     MenuDemoComponent,
     SidenavDemoComponent,
-    ToolbarDemoComponent
+    ToolbarDemoComponent,
+    HoverDirective,
+    GridComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    MatSliderModule,
     FormsModule,
-    MdInputModule,
-    MdButtonModule,
-    MdCardModule,
-    MdDialogModule,
-    MdTooltipModule,
-    MdSnackBarModule,
-    MdMenuModule,
-    MdIconModule,
-    MdSidenavModule,
-    MdToolbarModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'form', component: MyFormComponent},
       { path: 'dialog', component: DialogDemoComponent},
-      { path: 'tooltip', component: TooltipDemoComponent},
+      { path: 'tooltip', component: TooltipDemoComponent, canActivate: [AuthServiceService]},
       { path: 'snackbar', component: SnackbarDemoComponent},
       { path: 'menu', component: MenuDemoComponent},
       { path: 'sidenav', component: SidenavDemoComponent},
-      { path: 'toolbar', component: ToolbarDemoComponent}
-    ])
+      { path: 'toolbar', component: ToolbarDemoComponent},
+      { path: 'grid', component: GridComponent }
+    ]),
+    MatChipsModule
   ],
-  providers: [],
+  providers: [AuthServiceService],
   entryComponents: [MyDialogComponent],
   bootstrap: [AppComponent]
 })

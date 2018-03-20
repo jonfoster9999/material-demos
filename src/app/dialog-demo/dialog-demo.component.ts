@@ -1,5 +1,5 @@
 import { MyFormComponent } from './../my-form/my-form.component';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { Component, OnInit, ElementRef, TemplateRef } from '@angular/core';
 import { FormArray, FormControl } from '@angular/forms';
 import { MyDialogComponent } from 'app/my-dialog/my-dialog.component';
@@ -14,7 +14,7 @@ import { MyDialogComponent } from 'app/my-dialog/my-dialog.component';
 export class DialogDemoComponent implements OnInit {
 
   dialogResult = '';
-  constructor(private dialog: MdDialog) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
 
@@ -22,7 +22,7 @@ export class DialogDemoComponent implements OnInit {
 
   openDialog() {
 
-    let dialogRef = this.dialog.open(MyDialogComponent, {
+    const dialogRef = this.dialog.open(MyDialogComponent, {
       width: '600px',
       height: '300px',
       data: 'This text is passed into the dialog'

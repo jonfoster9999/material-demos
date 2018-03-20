@@ -1,0 +1,107 @@
+.inside {
+  height: 100px;
+  width: 100%;
+  background: mediumturquoise;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.really-inside {
+  height: 50%;
+  width: 50px;
+  background: coral;
+  border-radius: 100%;
+}
+
+
+.my-card {
+  width: 300px;
+  text-align: center;
+}
+
+.flex-me {
+  display: flex;
+  align-items: center;
+}
+
+md-slider {
+  width: 360px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+
+.screen {
+  height: 350px;
+  width: 200px;
+  background: black;
+  border: 3px solid lightgray;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 2px 2px 2px 2px black;
+}
+
+.display {
+  height: 40%;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+}
+
+.screen p {
+  font-size: .5em;
+
+}
+
+.container {
+  border: 4px solid gray;
+  border-radius: 5px;
+  background-image: url(http://www.powerpointhintergrund.com/uploads/amazing-brick-wall-background-ppt-12.jpg);
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 200px;
+
+  min-width: 1000px;
+}
+
+.flex-me{
+  display: flex;
+}
+
+
+.column-1 {
+  width: 40%;
+  float: left;
+  overflow-y: scroll;
+  border-right: 1px solid darkslategray;
+}
+
+.column-2 {
+  float: left;
+  border-left: 1px solid black;
+  position: fixed;
+  left: 40%;
+  height: 100%;
+  background-color: darkslategray;
+  color: white;
+  top: 100px;
+  width: 100%;
+
+
+}
+
+.header-1 {
+  width: 100%;
+  background-color: darkslategray;
+  color: white;
+  position: fixed;
+  top: 0px;
+  height: 100px;
+}
+
+
+
+
